@@ -1,4 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
+
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,43 +7,44 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- TODO: id у нас принято именовать по следующему принципу: et_input_field, btn_next-->
+
     <EditText
         android:id="@+id/inputText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin = "8dp"
+        android:layout_margin="8dp"
+        android:backgroundTint="@color/colorAccent"
         android:inputType="textMultiLine"
         android:lines="2"
         android:textColor="@color/colorWhite"
-        android:backgroundTint="@color/colorAccent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_margin ="8dp"
+        android:layout_margin="8dp"
         android:src="@drawable/domovenok"
         app:layout_constraintBottom_toTopOf="@+id/nextPageBtn"
-        app:layout_constraintTop_toBottomOf="@+id/inputText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputText" />
 
     <Button
         android:id="@+id/nextPageBtn"
-        android:background = "@drawable/corner_rounded"
-        android:backgroundTint="@color/colorAccent"
-        android:textColor="@color/colorWhite"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:layout_margin = "8dp"
+        android:layout_margin="8dp"
+        android:background="@drawable/corner_rounded"
+        android:backgroundTint="@color/colorAccent"
         android:text="@string/nextPageBtn"
         android:textAllCaps="false"
+        android:textColor="@color/colorWhite"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
 
 </android.support.constraint.ConstraintLayout>
